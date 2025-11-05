@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/* there are other possibilities for variables, but these are common options */
+:root {
+  --primary-white: #f4f4f4;
+  --secondary-blue: #1b4f72;
+  --secondary-green: #2e8b57;
+  --radius: 1rem;
+}
+
+/* :root {
+  --primary-white: #DB1DED;
+  --secondary-blue: #FF331F;
+  --secondary-green: #9BC53D;
+  --radius: 45px;
+} */
+
+body {
+  background: url(https://assets.codepen.io/t-15440/itp-stars.jpg);
+  font-family: Barlow, sans-serif;
+  color: var(--primary-white);
+}
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+header {
+  text-align: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+nav a {
+  display: block;
+  color: #ffffff;
+  font-size: 1.1rem;
+  text-decoration: none;
+  padding: 1rem;
+  font-weight: bold;
+  text-transform: lowercase;
+}
+nav a:hover {
+  color: var(--secondary-green);
+}
+.button {
+  background-color: var(--secondary-blue);
+  display: inline-block;
+  border-radius: var(--radius);
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.75rem;
+  font-weight: bold;
+  text-transform: lowercase;
+}
+.button:hover {
+  background-color: var(--secondary-green);
+  color: #000000;
+}
+img {
+  max-width: 100%;
+  border-radius: var(--radius);
+}
+.intro {
+  margin-bottom: 4rem;
+  text-align: center;
+}
+main {
+  margin-top: 3rem;
+  text-align: center;
+}
+.grid {
+  display: grid;
+  gap: 4rem;
+}
+footer {
+  background-color: var(--secondary-blue);
+  margin: 5rem 0;
+  padding: 1.5rem;
+  font-size: 1.1rem;
+  text-align: center;
+  border-radius: var(--radius);
+}
+footer a {
+  color: #000000;
+  text-decoration: black wavy underline;
+}
+footer a:hover {
+  text-decoration: none;
+}
+@media (min-width: 800px) {
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+  }
+}
+@media (max-width: 850px) {
+  header {
+    justify-content: center;
+  }
+}
